@@ -4,7 +4,13 @@ angular.module('starter.controllers', [])
 
   $scope.generateOptions = function() {
   // $scope.modal.show();
-  $state.go('tab.chats');
+    $state.go('tab.chats');
+  };
+
+  $scope.openAccountTab = function() {
+
+    $state.go('tab.account');
+
   };
 
 })
