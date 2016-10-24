@@ -1,6 +1,13 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, $state) {
+
+  $scope.generateOptions = function() {
+  // $scope.modal.show();
+  $state.go('tab.chats');
+  };
+
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
@@ -14,6 +21,9 @@ angular.module('starter.controllers', [])
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);
+  };
+  $scope.myGoBack = function() {
+    $ionicHistory.goBack();
   };
 })
 
