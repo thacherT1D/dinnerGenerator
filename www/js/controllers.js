@@ -4,7 +4,7 @@ angular.module('starter.controllers', [])
 
   $scope.generateOptions = function() {
   // $scope.modal.show();
-    $state.go('tab.chats');
+    $state.go('tab.cards');
   };
 
   $scope.openAccountTab = function() {
@@ -15,7 +15,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ChatsCtrl', function($scope, Chats) {
+.controller('CardsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
